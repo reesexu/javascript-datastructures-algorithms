@@ -78,7 +78,7 @@ export default class Deque<T> {
     if (this.isEmpty()) return result
     result = `${this.items[this.lowestCount]}`
     for (let i = this.lowestCount + 1; i < this.count; i++) {
-      result = `${result},${this.items[i]}`
+      result += `,${this.items[i]}`
     }
     return result
   }

@@ -45,7 +45,7 @@ export default class Stack<T> {
     if (this.isEmpty()) return result
     result = `${this.items[0]}`
     for (let i = 1; i < this.count; i++) {
-      result = `${result},${this.items[i]}`
+      result += `,${this.items[i]}`
     }
     return result
   }

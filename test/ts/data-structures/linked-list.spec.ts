@@ -1,6 +1,7 @@
 import 'mocha';
 import { expect } from 'chai';
-import { LinkedList, util } from '../../../src/ts/index';
+import LinkedList from '../../../mySrc/ts/data-structures/linked-list';
+import {defaultEquals} from '../../../mySrc/ts/util'
 import MyObj from './my-obj';
 
 describe('LinkedList', () => {
@@ -9,7 +10,7 @@ describe('LinkedList', () => {
   let max: number;
 
   beforeEach(() => {
-    list = new LinkedList<number>(util.defaultEquals);
+    list = new LinkedList<number>(defaultEquals);
     min = 1;
     max = 3;
   });

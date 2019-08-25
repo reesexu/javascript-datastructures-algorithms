@@ -46,7 +46,7 @@ export default class Deque<T> {
     if (this.isEmpty()) return result
     result = `${this.items[0]}`
     for (let i = 1; i < this.items.length; i++) {
-      result = `${result},${this.items[i]}`
+      result += `,${this.items[i]}`
     }
     return result
   }
